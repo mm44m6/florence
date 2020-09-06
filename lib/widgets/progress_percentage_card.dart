@@ -25,18 +25,8 @@ class ProgressPercentageCard extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                padding: EdgeInsets.only(top: 10),
-                child: CircularPercentIndicator(
-                  radius: 60.0,
-                  lineWidth: 5.0,
-                  percent: 0.2,
-                  center: Text(
-                    "${conclusionPercentage * 100}%",
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                  progressColor: Theme.of(context).primaryColor,
-                ),
-              ),
+                  padding: EdgeInsets.only(top: 10),
+                  child: _checkQuestionnaireConclusion(context)),
               _checkTitle(context),
               Container(
                 margin: EdgeInsets.only(bottom: 10, left: 30, right: 30),
@@ -68,6 +58,27 @@ class ProgressPercentageCard extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  Widget _checkQuestionnaireConclusion(context) {
+    if (conclusionPercentage == 1) {
+      return Icon(
+        Icons.verified,
+        size: 65,
+        color: Theme.of(context).primaryColor,
+      );
+    }
+
+    return CircularPercentIndicator(
+      radius: 60.0,
+      lineWidth: 5.0,
+      percent: 0.2,
+      center: Text(
+        "${conclusionPercentage * 100}%",
+        style: Theme.of(context).textTheme.bodyText1,
+      ),
+      progressColor: Theme.of(context).primaryColor,
     );
   }
 }
