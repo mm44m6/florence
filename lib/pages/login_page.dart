@@ -1,4 +1,5 @@
 import 'package:florence/widgets/custom_appbar.dart';
+import 'package:florence/widgets/custom_navigation_bar.dart';
 import 'package:florence/widgets/default_filled_button.dart';
 import 'package:florence/widgets/default_input.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,16 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    void _navigateLoggedHomePage() {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CustomNavigationBar(),
+        ),
+        (_) => false,
+      );
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: CustomAppBar(),
@@ -44,7 +55,7 @@ class LoginPage extends StatelessWidget {
               child: DefaultFilledButton(
                 buttonText: 'Entrar',
                 buttonWidth: 270,
-                buttonOnPressed: () {},
+                buttonOnPressed: _navigateLoggedHomePage,
               ),
             )
           ],
