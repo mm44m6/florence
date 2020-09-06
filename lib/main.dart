@@ -1,5 +1,6 @@
 import 'package:florence/florence_theme.dart';
 import 'package:florence/pages/login_page.dart';
+import 'package:florence/pages/register_page.dart';
 
 import 'package:florence/pages/unlogged_home_page.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routes: {
         '/login': (context) => LoginPage(),
+        '/register': (context) => RegisterPage(),
       },
       theme: ThemeData(
         backgroundColor: FlorenceTheme.florenceWhiteColor,

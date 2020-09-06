@@ -10,6 +10,10 @@ class UnloggedHomePage extends StatelessWidget {
       Navigator.pushNamed(context, '/login');
     }
 
+    void _navigateRegisterPage() {
+      Navigator.pushNamed(context, '/register');
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: CustomAppBar(),
@@ -40,7 +44,7 @@ class UnloggedHomePage extends StatelessWidget {
           DefaultFilledButton(
             buttonWidth: 270,
             buttonText: 'Criar uma conta',
-            buttonOnPressed: _navigateLoginPage,
+            buttonOnPressed: _navigateRegisterPage,
           ),
           DefaultOutlineButton(
             buttonWidth: 270,
