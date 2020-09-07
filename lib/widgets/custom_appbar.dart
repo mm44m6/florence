@@ -23,10 +23,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       if (isReminderShowing) {
         return GestureDetector(
           onTap: () => _navigateRemindersPage(),
-          child: Icon(
-            Icons.notifications,
-            color: Colors.deepOrange,
-            size: 50,
+          child: Container(
+            margin: EdgeInsets.only(right: 20),
+            child: Icon(
+              Icons.notifications,
+              color: Colors.deepOrange,
+              size: 50,
+            ),
           ),
         );
       }

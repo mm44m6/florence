@@ -19,7 +19,7 @@ class DefaultCard extends StatelessWidget {
                 blurRadius: 10,
                 spreadRadius: 1,
                 offset: Offset.zero,
-                color: Colors.grey.shade200),
+                color: Colors.grey.shade300),
           ],
         ),
         margin: EdgeInsets.only(top: 10, left: 30, right: 20, bottom: 10),

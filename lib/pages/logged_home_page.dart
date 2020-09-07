@@ -41,79 +41,87 @@ class LoggedHomePage extends StatelessWidget {
       Navigator.pushNamed(context, '/reminders');
     }
 
-    return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(
-        isReminderShowing: true,
+    return Stack(children: <Widget>[
+      Image.asset(
+        "assets/images/background.jpeg",
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        fit: BoxFit.cover,
       ),
-      body: Stack(
-        children: [
-          ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Column(children: [
-                ProgressPercentageCard(
-                  cardOnTap: _navigateProfilePage,
-                  cardTitle: '',
-                  cardText:
-                      'Mantenha seu cadastro atualizado para acumular pontos',
-                  conclusionPercentage: 0.2,
-                ),
-                DefaultCard(
-                  cardOnTap: _navigateMedicalHistoryHomePage,
-                  cardTitle: 'Histórico Médico',
-                  cardText:
-                      'Aqui você tem acesso a todo o seu histórico médico',
-                ),
-                DefaultCard(
-                  cardOnTap: _navigateCheckinPage,
-                  cardTitle: 'Check in',
-                  cardText:
-                      'Agilize seu atendimento no Pronto Atendimento (PA)',
-                ),
-              ]),
-              Column(
-                children: [
-                  DefaultCard(
-                    cardOnTap: _navigatePreventionPage,
-                    cardTitle: 'Prenvenção',
+      Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: CustomAppBar(
+          isReminderShowing: true,
+        ),
+        body: Stack(
+          children: [
+            ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Column(children: [
+                  ProgressPercentageCard(
+                    cardOnTap: _navigateProfilePage,
+                    cardTitle: '',
                     cardText:
-                        'Dê uma olhada em como está sua saúde e como se prevenir.',
+                        'Mantenha seu cadastro atualizado para acumular pontos',
+                    conclusionPercentage: 0.2,
                   ),
                   DefaultCard(
-                    cardOnTap: _navigateRemindersPage,
-                    cardTitle: 'Lembretes',
+                    cardOnTap: _navigateMedicalHistoryHomePage,
+                    cardTitle: 'Histórico Médico',
                     cardText:
-                        'Consulte suas consultas marcadas e veja quais já está na hora de marcar.',
+                        'Aqui você tem acesso a todo o seu histórico médico',
                   ),
-                ],
-              )
-            ],
-          ),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: GestureDetector(
-              onTapDown: (TapDownDetails details) =>
-                  _showPopupMenu(details.globalPosition),
-              child: Container(
-                margin: EdgeInsets.all(20),
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                child: Icon(
-                  Icons.accessibility_new,
-                  size: 40,
-                  color: FlorenceTheme.florenceBlackColor,
+                  DefaultCard(
+                    cardOnTap: _navigateCheckinPage,
+                    cardTitle: 'Check in',
+                    cardText:
+                        'Agilize seu atendimento no Pronto Atendimento (PA)',
+                  ),
+                ]),
+                Column(
+                  children: [
+                    DefaultCard(
+                      cardOnTap: _navigatePreventionPage,
+                      cardTitle: 'Prenvenção',
+                      cardText:
+                          'Dê uma olhada em como está sua saúde e como se prevenir.',
+                    ),
+                    DefaultCard(
+                      cardOnTap: _navigateRemindersPage,
+                      cardTitle: 'Lembretes',
+                      cardText:
+                          'Consulte suas consultas marcadas e veja quais já está na hora de marcar.',
+                    ),
+                  ],
+                )
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: GestureDetector(
+                onTapDown: (TapDownDetails details) =>
+                    _showPopupMenu(details.globalPosition),
+                child: Container(
+                  margin: EdgeInsets.all(20),
+                  width: 50,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Icon(
+                    Icons.accessibility_new,
+                    size: 40,
+                    color: FlorenceTheme.florenceBlackColor,
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
-      ),
-    );
+            )
+          ],
+        ),
+      )
+    ]);
   }
 }
 
