@@ -36,11 +36,11 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(Icons.home),
             title: Text('Inicio'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined),
+            icon: Icon(Icons.search),
             title: Text('Procurar'),
           ),
           BottomNavigationBarItem(
@@ -51,7 +51,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             title: Text('Perfil'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu_open_outlined),
+            icon: Icon(Icons.menu),
             title: Text('Menu'),
           )
         ],

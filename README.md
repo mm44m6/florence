@@ -1,17 +1,30 @@
 # florence
 
-A new Flutter project.
 
-## Getting Started
+## Rodando esse projeto
 
-This project is a starting point for a Flutter application.
+Para rodar esse projeto é necessário ter o Flutter **no channel master** e todas as ferramentas instaladas.
+Após isso, fazer um clone do projeto
 
-A few resources to get you started if this is your first Flutter project:
+````
+git clone https://github.com/mm44m6/florence.git
+````
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Entrar na pasta do projeto e usar o comando
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# florence
+````
+flutter pub get
+`````
+
+Para instalar as dependencias.
+Após isso, abrir um emulador e rodar o comando:
+
+````
+flutter run
+````
+
+Isso fará com o que o projeto seja iniciado no emulador.
+
+
+
+

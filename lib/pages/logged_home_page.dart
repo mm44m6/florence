@@ -14,8 +14,9 @@ class LoggedHomePage extends StatelessWidget {
         context: context,
         position: RelativeRect.fromLTRB(left, top, 0, 0),
         items: [
-          PopupMenuItem<String>(child: const Text('Doge'), value: 'Doge'),
-          PopupMenuItem<String>(child: const Text('Lion'), value: 'Lion'),
+          PopupMenuItem<String>(child:Image(image: null), value: 'Aumentar Fonte'),
+          PopupMenuItem<String>(child: Image(image: null), value: 'Diminuir Fonte'),
+          PopupMenuItem<String>(child: Image(image: null), value: 'Contraste'),
         ],
         elevation: 8.0,
       );
