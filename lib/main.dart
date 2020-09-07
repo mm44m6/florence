@@ -1,4 +1,5 @@
 import 'package:florence/florence_theme.dart';
+import 'package:florence/pages/anamnese_init_page.dart';
 import 'package:florence/pages/checkin_page.dart';
 import 'package:florence/pages/logged_home_page.dart';
 import 'package:florence/pages/login_page.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         '/search': (context) => SearchPage(),
         '/menu': (context) => MenuPage(),
         '/myQRCode': (context) => MyQRCodePage(),
-        '/prevention': (context) => PreventionPage()
+        '/prevention': (context) => PreventionPage(),
+        '/anamnese': (context) => AnamneseInitPage()
       },
       theme: ThemeData(
         backgroundColor: FlorenceTheme.florenceWhiteColor,
@@ -42,28 +44,43 @@ class MyApp extends StatelessWidget {
         accentColor: FlorenceTheme.florenceWhiteColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         textTheme: TextTheme(
-          headline1: TextStyle(
-            color: FlorenceTheme.florenceBlackColor,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w700,
-            fontSize: 20,
-          ),
-          bodyText1: TextStyle(
-            fontFamily: 'Poppins',
-            fontSize: 15,
-            color: FlorenceTheme.florenceBlackColor,
-          ),
-          bodyText2: TextStyle(
-            fontFamily: 'Poppins',
-            fontSize: 15,
-            color: FlorenceTheme.florenceWhiteColor,
-          ),
-          headline4: TextStyle(
-            fontFamily: 'Poppins',
-            fontSize: 15,
-            color: FlorenceTheme.primaryGreenColor,
-          ),
-        ),
+            headline1: TextStyle(
+              color: FlorenceTheme.florenceBlackColor,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w700,
+              fontSize: 20,
+            ),
+            headline2: TextStyle(
+              color: FlorenceTheme.florenceBlackColor,
+              fontFamily: 'Poppins',
+              fontSize: 22,
+            ),
+            bodyText1: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 15,
+              color: FlorenceTheme.florenceBlackColor,
+            ),
+            bodyText2: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 15,
+              color: FlorenceTheme.florenceWhiteColor,
+            ),
+            headline4: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 15,
+              color: FlorenceTheme.primaryGreenColor,
+            ),
+            headline5: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 16,
+              color: FlorenceTheme.florenceBlackColor[600],
+              fontWeight: FontWeight.w500,
+            ),
+            caption: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 13,
+              color: FlorenceTheme.florenceBlackColor[600],
+            )),
       ),
       home: UnloggedHomePage(),
     );

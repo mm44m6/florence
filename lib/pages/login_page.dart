@@ -53,6 +53,7 @@ class LoginPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 30),
               child: DefaultFilledButton(
+                enabled: true,
                 buttonText: 'Entrar',
                 buttonWidth: 270,
                 buttonOnPressed: _navigateLoggedHomePage,

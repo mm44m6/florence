@@ -42,6 +42,7 @@ class UnloggedHomePage extends StatelessWidget {
             ),
           ),
           DefaultFilledButton(
+            enabled: true,
             buttonWidth: 270,
             buttonText: 'Criar uma conta',
             buttonOnPressed: _navigateRegisterPage,
