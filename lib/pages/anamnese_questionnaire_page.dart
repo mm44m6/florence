@@ -9,19 +9,34 @@ import 'package:flutter/material.dart';
 import 'anamnese_questions/anamnese_question_chronic_disease.dart';
 
 class AnamneseQuestionnairePage extends StatelessWidget {
+  final _controller = new PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: CustomAppBar(),
       body: PageView(
+        controller: _controller,
         children: [
-          AnamneseQuestionBirthPlace(),
-          AnamneseQuestionBirthDate(),
-          AnamneseQuestionTelephone(),
-          AnamneseQuestionChronicDisease(),
-          AnamneseQuestionAccidents(),
-          AnamneseQuestionEnd()
+          AnamneseQuestionBirthPlace(
+            controller: _controller,
+          ),
+          AnamneseQuestionBirthDate(
+            controller: _controller,
+          ),
+          AnamneseQuestionTelephone(
+            controller: _controller,
+          ),
+          AnamneseQuestionChronicDisease(
+            controller: _controller,
+          ),
+          AnamneseQuestionAccidents(
+            controller: _controller,
+          ),
+          AnamneseQuestionEnd(
+            controller: _controller,
+          )
         ],
       ),
     );

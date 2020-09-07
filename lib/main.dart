@@ -4,6 +4,8 @@ import 'package:florence/pages/checkin_page.dart';
 import 'package:florence/pages/logged_home_page.dart';
 import 'package:florence/pages/login_page.dart';
 import 'package:florence/pages/medical_history_home_page.dart';
+import 'package:florence/pages/medical_history_page.dart';
+import 'package:florence/pages/medical_history_year_selection_page.dart';
 import 'package:florence/pages/menu_page.dart';
 import 'package:florence/pages/my_qrcode_page.dart';
 import 'package:florence/pages/prevention_page.dart';
@@ -36,7 +38,10 @@ class MyApp extends StatelessWidget {
         '/menu': (context) => MenuPage(),
         '/myQRCode': (context) => MyQRCodePage(),
         '/prevention': (context) => PreventionPage(),
-        '/anamnese': (context) => AnamneseInitPage()
+        '/anamnese': (context) => AnamneseInitPage(),
+        '/medical_history_year_selection_page': (context) =>
+            MedicalHistoryYearSelectionPage(),
+        '/medical_history': (context) => MedicalHistoryPage()
       },
       theme: ThemeData(
         backgroundColor: FlorenceTheme.florenceWhiteColor,
@@ -54,6 +59,11 @@ class MyApp extends StatelessWidget {
               color: FlorenceTheme.florenceBlackColor,
               fontFamily: 'Poppins',
               fontSize: 22,
+            ),
+            headline3: TextStyle(
+              color: FlorenceTheme.florenceBlackColor,
+              fontFamily: 'Poppins',
+              fontSize: 19,
             ),
             bodyText1: TextStyle(
               fontFamily: 'Poppins',

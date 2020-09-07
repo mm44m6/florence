@@ -8,8 +8,11 @@ class CheckInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        title: 'Check-in',
+      ),
       body: Container(
+        margin: EdgeInsets.symmetric(vertical: 50),
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
