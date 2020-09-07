@@ -1,9 +1,11 @@
+import 'package:florence/pages/digitalize_documents_page.dart';
 import 'package:florence/pages/logged_home_page.dart';
 import 'package:florence/pages/menu_page.dart';
 import 'package:florence/pages/my_qrcode_page.dart';
 import 'package:florence/pages/profile_page.dart';
 import 'package:florence/pages/search_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   @override
@@ -22,7 +24,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         children: [
           LoggedHomePage(),
           SearchPage(),
-          MyQRCodePage(),
+          DigitalizeDocumentsPage(),
           ProfilePage(),
           MenuPage()
         ],
@@ -42,9 +44,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             title: Text('Procurar'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search_outlined),
-            title: Text('Procurar'),
-          ),
+              icon: Image(image: AssetImage('assets/images/myqrcode.png')),
+              title: Text('Digitalizar')),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
             title: Text('Perfil'),
