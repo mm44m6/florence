@@ -6,7 +6,7 @@ class UnloggedHomeOnboardingSlideTwo extends StatelessWidget {
     return Column(
       children: [
         Image(
-          image: AssetImage('assets/images/onboarding_carousel_1.png'),
+          image: AssetImage('assets/images/onboarding_carousel_2.png'),
           fit: BoxFit.cover,
           height: 300,
         ),

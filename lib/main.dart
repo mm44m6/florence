@@ -26,87 +26,80 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      routes: {
-        '/login': (context) => LoginPage(),
-        '/register': (context) => RegisterPage(),
-        '/logged_home': (context) => LoggedHomePage(),
-        '/medical_history_home': (context) => MedicalHistoryHomePage(),
-        '/reminders': (context) => RemindersPage(),
-        '/checkin': (context) => CheckInPage(),
-        '/profile': (context) => ProfilePage(),
-        '/search': (context) => SearchPage(),
-        '/menu': (context) => MenuPage(),
-        '/myQRCode': (context) => MyQRCodePage(),
-        '/prevention': (context) => PreventionPage(),
-        '/anamnese': (context) => AnamneseInitPage(),
-        '/medical_history_year_selection_page': (context) =>
-            MedicalHistoryYearSelectionPage(),
-        '/medical_history': (context) => MedicalHistoryPage()
-      },
-      theme: ThemeData(
-        backgroundColor: FlorenceTheme.florenceWhiteColor,
-        primarySwatch: FlorenceTheme.primaryGreenColor,
-        accentColor: FlorenceTheme.florenceWhiteColor,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        textTheme: TextTheme(
-            headline1: TextStyle(
-              color: FlorenceTheme.florenceBlackColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w700,
-              fontSize: 20,
-            ),
-            headline2: TextStyle(
-              color: FlorenceTheme.florenceBlackColor,
-              fontFamily: 'Poppins',
-              fontSize: 22,
-            ),
-            headline3: TextStyle(
-              color: FlorenceTheme.florenceBlackColor,
-              fontFamily: 'Poppins',
-              fontSize: 19,
-            ),
-            bodyText1: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 15,
-              color: FlorenceTheme.florenceBlackColor,
-            ),
-            bodyText2: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 15,
-              color: FlorenceTheme.florenceWhiteColor,
-            ),
-            headline4: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 15,
-              color: FlorenceTheme.primaryGreenColor,
-            ),
-            headline5: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 16,
-              color: FlorenceTheme.florenceBlackColor[600],
-              fontWeight: FontWeight.w500,
-            ),
-            headline6: TextStyle(
-              color: FlorenceTheme.florenceBlackColor,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-            ),
-            caption: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 13,
-              color: FlorenceTheme.florenceBlackColor[600],
-            )),
-      ),
-      home: SplashScreen(
-          seconds: 14,
-          navigateAfterSeconds: UnloggedHomePage(),
-          image: new Image.asset('assets/images/logo_unimed.png'),
-          backgroundColor: Colors.black,
-          styleTextUnderTheLoader: new TextStyle(),
-          photoSize: 100.0,
-          loaderColor: Theme.of(context).primaryColor),
-    );
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/login': (context) => LoginPage(),
+          '/register': (context) => RegisterPage(),
+          '/logged_home': (context) => LoggedHomePage(),
+          '/medical_history_home': (context) => MedicalHistoryHomePage(),
+          '/reminders': (context) => RemindersPage(),
+          '/checkin': (context) => CheckInPage(),
+          '/profile': (context) => ProfilePage(),
+          '/search': (context) => SearchPage(),
+          '/menu': (context) => MenuPage(),
+          '/myQRCode': (context) => MyQRCodePage(),
+          '/prevention': (context) => PreventionPage(),
+          '/anamnese': (context) => AnamneseInitPage(),
+          '/medical_history_year_selection_page': (context) =>
+              MedicalHistoryYearSelectionPage(),
+          '/medical_history': (context) => MedicalHistoryPage()
+        },
+        theme: ThemeData(
+          backgroundColor: FlorenceTheme.florenceWhiteColor,
+          primarySwatch: FlorenceTheme.primaryGreenColor,
+          accentColor: FlorenceTheme.florenceWhiteColor,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          textTheme: TextTheme(
+              headline1: TextStyle(
+                color: FlorenceTheme.florenceBlackColor,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w700,
+                fontSize: 20,
+              ),
+              headline2: TextStyle(
+                color: FlorenceTheme.florenceBlackColor,
+                fontFamily: 'Poppins',
+                fontSize: 22,
+              ),
+              headline3: TextStyle(
+                color: FlorenceTheme.florenceBlackColor,
+                fontFamily: 'Poppins',
+                fontSize: 19,
+              ),
+              bodyText1: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
+                color: FlorenceTheme.florenceBlackColor,
+              ),
+              bodyText2: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
+                color: FlorenceTheme.florenceWhiteColor,
+              ),
+              headline4: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 15,
+                color: FlorenceTheme.primaryGreenColor,
+              ),
+              headline5: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 16,
+                color: FlorenceTheme.florenceBlackColor[600],
+                fontWeight: FontWeight.w500,
+              ),
+              headline6: TextStyle(
+                color: FlorenceTheme.florenceBlackColor,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+              ),
+              caption: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 13,
+                color: FlorenceTheme.florenceBlackColor[600],
+              )),
+        ),
+        home: UnloggedHomePage());
   }
 }
