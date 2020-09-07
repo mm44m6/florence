@@ -16,6 +16,7 @@ import 'package:florence/pages/search_page.dart';
 
 import 'package:florence/pages/unlogged_home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -98,7 +99,14 @@ class MyApp extends StatelessWidget {
               color: FlorenceTheme.florenceBlackColor[600],
             )),
       ),
-      home: UnloggedHomePage(),
+      home: SplashScreen(
+          seconds: 14,
+          navigateAfterSeconds: UnloggedHomePage(),
+          image: new Image.asset('assets/images/logo_unimed.png'),
+          backgroundColor: Colors.black,
+          styleTextUnderTheLoader: new TextStyle(),
+          photoSize: 100.0,
+          loaderColor: Theme.of(context).primaryColor),
     );
   }
 }

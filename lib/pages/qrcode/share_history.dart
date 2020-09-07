@@ -3,6 +3,10 @@ import 'package:florence/widgets/default_filled_button.dart';
 import 'package:flutter/material.dart';
 
 class ShareHistory extends StatefulWidget {
+  final PageController controller;
+
+  ShareHistory({this.controller});
+
   @override
   State<StatefulWidget> createState() => _ShareHistoryState();
 }
@@ -144,6 +148,9 @@ class _ShareHistoryState extends State<ShareHistory> {
           child: DefaultFilledButton(
             buttonText: 'Continuar',
             enabled: true,
+            buttonOnPressed: () {
+              widget.controller.jumpToPage(1);
+            },
           ),
         ),
         Container(

@@ -41,9 +41,7 @@ class _MyQRCodePageState extends State<MyQRCodePage> {
                             setState(
                               () {
                                 _pageSelected = 0;
-                                _controller.previousPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease);
+                                _controller.jumpToPage(0);
                               },
                             );
                           }
@@ -62,9 +60,8 @@ class _MyQRCodePageState extends State<MyQRCodePage> {
                             setState(
                               () {
                                 _pageSelected = 1;
-                                _controller.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease);
+
+                                _controller.jumpToPage(2);
                               },
                             );
                           }
@@ -77,8 +74,11 @@ class _MyQRCodePageState extends State<MyQRCodePage> {
                 allowImplicitScrolling: false,
                 controller: _controller,
                 children: [
-                  ShareHistory(),
+                  ShareHistory(
+                    controller: _controller,
+                  ),
                   RecieveData(),
+                  Container()
                 ],
               ),
             )
