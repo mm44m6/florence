@@ -13,6 +13,15 @@ class DefaultCard extends StatelessWidget {
     return InkWell(
       onTap: () => cardOnTap(),
       child: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+                blurRadius: 10,
+                spreadRadius: 1,
+                offset: Offset.zero,
+                color: Colors.grey.shade200),
+          ],
+        ),
         margin: EdgeInsets.only(top: 10, left: 30, right: 20, bottom: 10),
         width: 300,
         height: 180,

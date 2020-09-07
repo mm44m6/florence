@@ -21,7 +21,9 @@ class UnloggedHomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: false,
+      ),
       body: Container(
         margin: EdgeInsets.only(top: 30),
         child: Column(children: [

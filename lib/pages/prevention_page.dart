@@ -6,7 +6,9 @@ class PreventionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: false,
+      ),
       body: Container(),
     );
   }

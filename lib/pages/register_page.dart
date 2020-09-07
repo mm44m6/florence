@@ -23,7 +23,9 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: false,
+      ),
       body: Column(
         children: [
           Container(

@@ -28,7 +28,9 @@ class LoggedHomePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: true,
+      ),
       body: ListView(
         scrollDirection: Axis.horizontal,
         children: [

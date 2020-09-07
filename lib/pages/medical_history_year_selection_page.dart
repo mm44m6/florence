@@ -13,6 +13,7 @@ class MedicalHistoryYearSelectionPage extends StatelessWidget {
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: CustomAppBar(
         title: 'Exames',
+        isReminderShowing: false,
       ),
       body: Container(
           margin: EdgeInsets.symmetric(vertical: 50),

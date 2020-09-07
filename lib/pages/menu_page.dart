@@ -18,7 +18,9 @@ class MenuPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: false,
+      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,

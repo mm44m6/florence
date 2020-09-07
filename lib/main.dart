@@ -86,6 +86,12 @@ class MyApp extends StatelessWidget {
               color: FlorenceTheme.florenceBlackColor[600],
               fontWeight: FontWeight.w500,
             ),
+            headline6: TextStyle(
+              color: FlorenceTheme.florenceBlackColor,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
             caption: TextStyle(
               fontFamily: 'Poppins',
               fontSize: 13,

@@ -48,12 +48,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/onboarding_carousel_1.png
-    - assets/images/onboarding_carousel_2.png
-    - assets/images/onboarding_carousel_3.png
-    - assets/images/logo_unimed.png
-    - assets/images/history_category_icon.png
-    
+    - assets/images/
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

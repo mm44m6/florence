@@ -29,7 +29,9 @@ class AnamneseInitPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        isReminderShowing: false,
+      ),
       body: Align(
         alignment: Alignment.center,
         child: Column(
