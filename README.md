@@ -1,10 +1,13 @@
 # florence
 
+Florence une tecnologia, acessibilidade, sustentabilidade, agilidade no atendimento e empodera seu bem maior que é o seu cliente
+
+## Requisitos minimos
+
+Para rodar esse projeto é necessário ter o Flutter **no channel master** e todas as ferramentas que ele depende instaladas.
 
 ## Rodando esse projeto
-
-Para rodar esse projeto é necessário ter o Flutter **no channel master** e todas as ferramentas instaladas.
-Após isso, fazer um clone do projeto
+Fazer um clone do projeto
 
 ````
 git clone https://github.com/mm44m6/florence.git

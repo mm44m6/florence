@@ -11,12 +11,14 @@ class LoggedHomePage extends StatelessWidget {
       double left = offset.dx;
       double top = offset.dy;
       await showMenu(
+        color: FlorenceTheme.florenceWhiteColor,
         context: context,
         position: RelativeRect.fromLTRB(left, top, 0, 0),
         items: [
-          PopupMenuItem<String>(child:Image(image: null), value: 'Aumentar Fonte'),
-          PopupMenuItem<String>(child: Image(image: null), value: 'Diminuir Fonte'),
-          PopupMenuItem<String>(child: Image(image: null), value: 'Contraste'),
+          PopupMenuItem<String>(child:Image(image: AssetImage('assets/images/Home_6.png')), value: 'Diminuir Fonte'),
+          PopupMenuItem<String>(child: Image(image: AssetImage('assets/images/Home_15.png')), value: 'voltar fonte'),
+          PopupMenuItem<String>(child: Image(image: AssetImage('assets/images/Home_14.png')), value: 'aumentar Fonte'),
+          PopupMenuItem<String>(child: Image(image: AssetImage('assets/images/Home_16.png')), value: 'Contraste'),
         ],
         elevation: 8.0,
       );
@@ -112,7 +114,7 @@ class LoggedHomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: Icon(
-                    Icons.accessibility_new,
+                    Icons.accessible,
                     size: 40,
                     color: FlorenceTheme.florenceBlackColor,
                   ),
